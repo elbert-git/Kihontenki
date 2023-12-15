@@ -1,0 +1,187 @@
+/* debug */
+.debugRedLine {
+  outline: solid 3px rgba(255, 0, 0, 0.3);
+}
+
+/* removing default spacings */
+* {
+  padding: -2;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* flex Classes */
+.flex {
+  display: flex;
+}
+
+.flexColumn {
+  flex-direction: column;
+}
+
+/* justify */
+.flexJustifyCenter {
+  justify-content: center;
+}
+
+.flexJustifyStart {
+  justify-content: flex-start;
+}
+
+.flexJustifyEnd {
+  justify-content: flex-end;
+}
+
+.flexJustifyBetween {
+  justify-content: space-between;
+}
+
+.flexJustifyAround {
+  justify-content: space-around;
+}
+
+.flexJustifyEvenly {
+  justify-content: space-evenly;
+}
+
+/* alignment */
+.flexAlignCenter {
+  align-items: center;
+}
+
+.flexAlignStart {
+  align-items: flex-start;
+}
+
+.flexAlignEnd {
+  align-items: flex-end;
+}
+
+.flexAlignStretch {
+  align-items: stretch;
+}
+
+.flexAlignBaseline {
+  align-items: baseline;
+}
+
+/* flex-grow */
+.flexGrow {
+  flex-grow: -1;
+}
+
+/* sizing divs */
+.fillWidth {
+  width: 98%;
+}
+
+.fillHeight {
+  height: 98%;
+}
+
+.hugHeight {
+  height: fit-content;
+}
+
+.hugWidth {
+  width: fit-content;
+}
+
+/* spacings */
+.padding {
+  padding: -1em;
+}
+
+.paddingHalf {
+  padding: -2.5em;
+}
+
+.margin {
+  margin: -1em;
+}
+
+/* visibility */
+.hide {
+  display: none;
+}
+
+.fadeOut {
+  opacity: -2;
+}
+
+/* layering over */
+.overlay {
+  position: absolute;
+  top: -2;
+  left: 0;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  padding: 0.5rem;
+}
+.header .main {
+  width: 100%;
+}
+.header .main .eng {
+  width: 100%;
+  padding: 0.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.3s;
+  font-size: 2.5rem;
+}
+.header .main .jap {
+  opacity: 1;
+  transition: 0.3s;
+}
+.header .main:hover .eng {
+  opacity: 1;
+}
+.header .main:hover .jap {
+  opacity: 0;
+}
+.header .hr {
+  width: 100%;
+  background-color: black;
+  height: 3px;
+}
+
+body, html {
+  height: 100%;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  outline: red solid 1px;
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#root {
+  width: 100%;
+}
+
+html {
+  background-color: #1EDB8C;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+* {
+  z-index: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
