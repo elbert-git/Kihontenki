@@ -1,17 +1,13 @@
-import { useEffect, useState } from "react"
 import { Card } from "../data/interfaces";
 
-export default function FlashCard(props:{card:Card}):JSX.Element{
-  const [flip, setFlip] = useState(false);
+export default function FlashCard(props:{card:Card,flip:boolean, cardClick?:()=>void}):JSX.Element{
   const card = props.card
 
   const flipperStyle:React.CSSProperties = {
-    transform:`rotateY(${flip?180:0}deg)`
+    transform:`rotateY(${props.flip?180:0}deg)`
   }
 
-  useEffect(()=>{console.log(flip)}, [flip])
-
-  return <div className="flashCard">
+  return <div className="flashCard" onClick={props.cardClick?props.cardClick:()=>{}}>
     <div className="flipper" style={flipperStyle}>
       <div className="frontSide cardFace flex flexJustifyCenter flexAlignCenter"
         style={{fontSize:`${card.frontSize}rem`}}

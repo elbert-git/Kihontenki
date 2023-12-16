@@ -11,7 +11,7 @@ export default function Accordion(props:{header:string, children:ReactNode}){
     transition:'0.3s',
     maxHeight: `${open?maxHeight:0}px`,
     height:'fit-content',
-    overflow:'clip'
+    overflow:'clip',
   }
   const triStyle:React.CSSProperties = {
     rotate: `${open?"0":"-90"}deg`,

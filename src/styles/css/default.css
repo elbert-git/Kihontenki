@@ -117,6 +117,7 @@
 }
 
 .interactive {
+  cursor: pointer;
   transition: 0.3s;
   scale: 1;
 }

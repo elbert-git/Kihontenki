@@ -5,7 +5,9 @@ import Accordion from "./Accordion";
 import Header from "./header";
 import { UserDecks } from "../../data/interfaces";
 import DataManager from "../../data/dataManager";
-import FlashCard from "../../components/flashCard";
+import CardGrid from "./cardGrid";
+// import FlashCard from "../../components/flashCard";
+import Toggle from "../../components/toggle";
 
 const style:React.CSSProperties = {
   backgroundColor:defaultColors.tael,
@@ -29,9 +31,7 @@ export function HomePage(){
       {userData?userData.decks.map((deck)=>{
         // render all cards
         return <Accordion header={deck.name} key={deck.name}>
-          {deck.cards.map((card)=>{
-            return <FlashCard card={card} key={card.key}></FlashCard>
-          })}
+					<CardGrid deck={deck}></CardGrid>
         </Accordion>
       }):"loading..."}
     </>

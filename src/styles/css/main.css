@@ -1,4 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.cardGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.accordion {
+  margin: 1rem 0rem;
+}
+
+.toggle {
+  height: 1rem;
+  width: 2rem;
+  border: 3px solid black;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  padding: 1px;
+  display: flex;
+  transition: 0.3s;
+}
+.toggle .knob {
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: black;
+}
+
 /* debug */
 .debugRedLine {
   outline: solid 3px rgba(255, 0, 0, 0.3);
@@ -118,6 +146,7 @@
 }
 
 .interactive {
+  cursor: pointer;
   transition: 0.3s;
   scale: 1;
 }
@@ -169,6 +198,8 @@
 }
 
 .flashCard {
+  width: 100%;
+  height: 100%;
   aspect-ratio: 2/3;
 }
 .flashCard .flipper {
@@ -185,9 +216,10 @@
   width: 100%;
   background-color: #1EDB8C;
   border: black 3px solid;
-  border-radius: 2rem;
+  border-radius: 1rem;
   transform-style: preserve-3d;
   backface-visibility: hidden;
+  filter: drop-shadow(-3px 3px 0px rgba(0, 0, 0, 0.5));
 }
 .flashCard .backSide {
   position: absolute;

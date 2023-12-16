@@ -61,7 +61,7 @@ const hiraganaCSV=`な,na
 にゅ,nyu
 にょ,nyo
 ちゃ,cha
-broken1,chu
+br1,chu
 ちょ,cho
 しゃ,sha
 しゅ,shu
@@ -73,7 +73,7 @@ broken1,chu
 ぎゅ,gyu
 ぎょ,gyo
 りゃ,rya
-broken2,ryu
+br2,ryu
 りょ,ryo
 みゃ,mya
 みゅ,myu

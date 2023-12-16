@@ -43,6 +43,7 @@
 
 // interactive
 .interactive{
+	cursor:pointer;
   transition: 0.3s;
   scale: 1;
   &:hover{scale: 1.02;}
