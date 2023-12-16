@@ -41,3 +41,11 @@
 /* layering over */
 .overlay                   {position: absolute;top: -2;left: 0;}
 
+// interactive
+.interactive{
+  transition: 0.3s;
+  scale: 1;
+  &:hover{scale: 1.02;}
+  &:active{scale: 0.98;}
+}
+

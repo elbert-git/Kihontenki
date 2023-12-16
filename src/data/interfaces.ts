@@ -1,4 +1,4 @@
-export interface UserInterfaces{
+export interface UserDecks{
   decks:Array<Deck>
 }
 
@@ -13,4 +13,5 @@ export interface Card{
   frontSize?:number;
   backSize?:number;
   score:number;
+  key:string
 }

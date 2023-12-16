@@ -1,8 +1,17 @@
-import Header from "./components/header"
+import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import { HomePage } from "./pages/homePage/home";
+import QuizPage from "./pages/quizPage/quiz";
 function App() {
-  return <div>
-    <Header></Header>
-  </div>
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/quiz" element={<QuizPage/>}/>
+        <Route path="*" element={"oh we fucked up lmao"}/>
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App
+

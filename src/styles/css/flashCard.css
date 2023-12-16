@@ -1,0 +1,30 @@
+.flashCard {
+  aspect-ratio: 2/3;
+}
+.flashCard .flipper {
+  transition: transform 0.3s;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  perspective: 10px;
+  transform-style: preserve-3d;
+}
+.flashCard .cardFace {
+  user-select: none;
+  height: 100%;
+  width: 100%;
+  background-color: #1EDB8C;
+  border: black 3px solid;
+  border-radius: 2rem;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+.flashCard .backSide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+/*# sourceMappingURL=flashCard.css.map */

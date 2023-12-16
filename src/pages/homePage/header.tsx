@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import DataManager from "../data/dataManager"
+import DataManager from "../../data/dataManager"
 
 export default function Header(){
   useEffect(()=>{

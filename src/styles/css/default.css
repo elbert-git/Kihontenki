@@ -116,4 +116,15 @@
   left: 0;
 }
 
+.interactive {
+  transition: 0.3s;
+  scale: 1;
+}
+.interactive:hover {
+  scale: 1.02;
+}
+.interactive:active {
+  scale: 0.98;
+}
+
 /*# sourceMappingURL=default.css.map */

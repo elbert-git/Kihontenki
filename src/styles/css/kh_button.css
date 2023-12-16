@@ -1,0 +1,9 @@
+.kh_button {
+  width: 100%;
+  font-weight: 600;
+  border: black 3px solid;
+  border-radius: 0.5rem;
+  filter: drop-shadow(-3px 3px 0px rgba(0, 0, 0, 0.527));
+}
+
+/*# sourceMappingURL=kh_button.css.map */

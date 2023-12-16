@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 /* debug */
 .debugRedLine {
   outline: solid 3px rgba(255, 0, 0, 0.3);
@@ -116,17 +117,26 @@
   left: 0;
 }
 
+.interactive {
+  transition: 0.3s;
+  scale: 1;
+}
+.interactive:hover {
+  scale: 1.02;
+}
+.interactive:active {
+  scale: 0.98;
+}
+
 .header {
   position: relative;
   width: 100%;
-  padding: 0.5rem;
 }
 .header .main {
   width: 100%;
 }
 .header .main .eng {
   width: 100%;
-  padding: 0.5rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -150,6 +160,43 @@
   height: 3px;
 }
 
+.kh_button {
+  width: 100%;
+  font-weight: 600;
+  border: black 3px solid;
+  border-radius: 0.5rem;
+  filter: drop-shadow(-3px 3px 0px rgba(0, 0, 0, 0.527));
+}
+
+.flashCard {
+  aspect-ratio: 2/3;
+}
+.flashCard .flipper {
+  transition: transform 0.3s;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  perspective: 10px;
+  transform-style: preserve-3d;
+}
+.flashCard .cardFace {
+  user-select: none;
+  height: 100%;
+  width: 100%;
+  background-color: #1EDB8C;
+  border: black 3px solid;
+  border-radius: 2rem;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+.flashCard .backSide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
 body, html {
   height: 100%;
 }
@@ -160,7 +207,6 @@ html {
 }
 
 body {
-  outline: red solid 1px;
   max-width: 800px;
   width: 100%;
   display: flex;
@@ -170,6 +216,7 @@ body {
 
 #root {
   width: 100%;
+  padding: 1rem;
 }
 
 html {
@@ -180,8 +227,12 @@ html {
   font-family: "Inter", sans-serif;
 }
 
-* {
-  z-index: 0;
+.pad1 {
+  padding: 1rem;
+}
+
+.margin1 {
+  margin: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */
