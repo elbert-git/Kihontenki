@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../scss/flashCard.scss"],"names":[],"mappings":"AAAA;EACC;EACA;EACC;;AACA;EACE;EACA;EAAc;EACd;EACA;EACA;;AAEF;EACE;EACA;EAAc;EACd;EACA;EACA;EACA;EACA;EACF;;AAGA;EACE;EACA;EAAO;EACP;EACA","file":"flashCard.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/flashCard.scss"],"names":[],"mappings":"AAAA;EACC;EACA;EACC;EACA;EACA;;AACA;EACE;EACA;EAAc;EACd;EACA;EACA;;AAEF;EACE;EACA;EAAc;EACd;EACA;EACA;EACA;EACA;EACA;EACF;EACE;;AAGF;EACE;EACA;EAAO;EACP;EACA","file":"flashCard.css"}

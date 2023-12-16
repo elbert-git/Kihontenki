@@ -231,7 +231,8 @@ export default function createDefaultData(){
         back:pair[1],
         frontSize:3,
         backSize:2,
-        score:0,
+        // score:0,
+        score:Math.floor(Math.random()*100),
         key:generateRandomString(50) as string
       }
       return card
@@ -246,7 +247,8 @@ export default function createDefaultData(){
         back:pair[1],
         frontSize:3,
         backSize:2,
-        score:0,
+        // score:0,
+        score:Math.floor(Math.random()*100),
         key:generateRandomString(50) as string
       }
       return card
@@ -254,7 +256,15 @@ export default function createDefaultData(){
   }
   
   const UserDecks:UserDecks = {
-    decks:[hiraganaDeck, katakanaDeck]
+    decks:[hiraganaDeck, katakanaDeck],
+    cachedActive:{}
+  }
+
+  // modify active cache to make first 5 hiragana cards active
+  const ids = UserDecks.decks[0].cards.map(card=>card.key)
+  for (let index = 0; index < 5; index++) {
+    const id = ids[index];
+    UserDecks.cachedActive![id] = true
   }
 
   return UserDecks

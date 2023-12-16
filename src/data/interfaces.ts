@@ -1,5 +1,6 @@
 export interface UserDecks{
-  decks:Array<Deck>
+  decks:Array<Deck>;
+  cachedActive?:{[index:string]:boolean};
 }
 
 export interface Deck{
