@@ -5,12 +5,12 @@ import ResetPage from "./pages/resetDataPage";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Kihontenki/">
       <Routes>
         <Route path="/" element={<HomePage/>}/>
         <Route path="/quiz" element={<QuizPage/>}/>
         <Route path="/resetData" element={<ResetPage/>}/>
-        <Route path="*" element={"oh we fucked up lmao"}/>
+        <Route path="*" element={"oooohh something went wrong"}/>
       </Routes>
     </BrowserRouter>
   )
