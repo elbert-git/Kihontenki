@@ -6,6 +6,7 @@ export interface UserDecks{
 export interface Deck{
   name:string;
   cards:Array<Card>;
+  key:string
 }
 
 export interface Card{

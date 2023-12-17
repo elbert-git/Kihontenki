@@ -10,7 +10,7 @@ export default class DataManager{
   static cache:UserDecks;
   constructor(){}
 
-  static init(){
+  static loadData(){
     // load from disk if it exists
     const load = localStorage.getItem(localCacheKey);
     if(load){ // if it exists proceed to load

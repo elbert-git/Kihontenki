@@ -3,7 +3,7 @@
 	height:100%;
   aspect-ratio: 2/3;
   transform-style: preserve-3d;
-  perspective: 500px;
+  perspective: 10000px;
   .flipper{
     transition: transform 0.3s cubic-bezier(.08,.65,.3,1.35);
     height: 100%; width: 100%;

@@ -4,6 +4,9 @@ import App from './App.tsx'
 import './styles/css/main.css'
 import DataManager from './data/dataManager.ts' // !! debug remove when done. it's for clearing cache
 
+// init data manager
+DataManager.loadData()
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <App />

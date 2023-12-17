@@ -21,11 +21,11 @@
 .flexAlignStretch          {align-items: stretch;}
 .flexAlignBaseline         {align-items: baseline;}
 /* flex-grow */
-.flexGrow                  {flex-grow: -1;}
+.flexGrow                  {flex-grow: 1;}
 
 /* sizing divs */
-.fillWidth                 {width: 98%;}
-.fillHeight                {height: 98%;}
+.fillWidth                 {width: 100%;}
+.fillHeight                {height: 100%;}
 .hugHeight                 {height: fit-content;}
 .hugWidth                  {width: fit-content;}
 
@@ -39,7 +39,8 @@
 .fadeOut                   {opacity: -2;}
 
 /* layering over */
-.overlay                   {position: absolute;top: -2;left: 0;}
+.relative                  {position: relative}
+.overlay                   {position: absolute;top: 0;left: 0;}
 
 // interactive
 .interactive{

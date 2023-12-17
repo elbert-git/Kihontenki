@@ -6,6 +6,7 @@ import Header from "./header";
 import { UserDecks } from "../../data/interfaces";
 import DataManager from "../../data/dataManager";
 import CardGrid from "./cardGrid";
+import { useNavigate } from "react-router-dom";
 
 const mainQuizButtonStyle:React.CSSProperties = {
   backgroundColor:defaultColors.tael,
@@ -35,7 +36,7 @@ export function HomePage(){
 
   // load user data on start
   useEffect(()=>{
-    DataManager.init()
+    DataManager.loadData();
     const cache = DataManager.cache;
     // set cache
     setUserData(cache);
@@ -43,10 +44,12 @@ export function HomePage(){
     setEnabledCards(cache.cachedActive as EnabledCardsState)
   }, [])
 
+  const navigateTo = useNavigate()
+ 
   return (
     <EnabledCardsContext.Provider value={[enabledCards, setEnabledCardsAndSaveData]}>
         <Header></Header>
-        <KH_Button click={()=>{}} content="Quiz" style={mainQuizButtonStyle}></KH_Button>
+        <KH_Button click={()=>{navigateTo('/quiz')}} style={mainQuizButtonStyle}>Quiz</KH_Button>
         {/* render all decks  */}
         {userData?userData.decks.map((deck)=>{
           // render all cards

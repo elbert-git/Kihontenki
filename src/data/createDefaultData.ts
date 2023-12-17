@@ -224,6 +224,7 @@ export default function createDefaultData(){
   //create array of cards 
   const hiraganaDeck:Deck = {
     name:'Hiragana',
+    key:generateRandomString(20),
     cards: hiraganaCSV.split(/\r?\n/).map((line)=>{
       const pair = line.split(',')
       const card:Card = {
@@ -231,8 +232,8 @@ export default function createDefaultData(){
         back:pair[1],
         frontSize:3,
         backSize:2,
-        // score:0,
-        score:Math.floor(Math.random()*100),
+        score:0,
+        // score:Math.floor(Math.random()*100),
         key:generateRandomString(50) as string
       }
       return card
@@ -240,6 +241,7 @@ export default function createDefaultData(){
   }
   const katakanaDeck:Deck = {
     name:'Katakana',
+    key:generateRandomString(20),
     cards: kataCSV.split(/\r?\n/).map((line)=>{
       const pair = line.split(',')
       const card:Card = {
@@ -247,8 +249,8 @@ export default function createDefaultData(){
         back:pair[1],
         frontSize:3,
         backSize:2,
-        // score:0,
-        score:Math.floor(Math.random()*100),
+        score:0,
+        // score:Math.floor(Math.random()*100),
         key:generateRandomString(50) as string
       }
       return card

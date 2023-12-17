@@ -1,0 +1,19 @@
+.quiz{
+  overflow: clip;
+  .cardZone{
+    max-height: 100%;
+    position: relative;
+    overflow: clip;
+    .flashCard{
+      width: 80%;
+    }
+    overflow: visible;
+  }
+  .quizButtons{
+    height: 10rem;
+    svg{max-height: 3rem;}
+    button{margin: 0.5rem;}
+    .judgementSection{background-color: #1EDB8C; transition: 0.3s;}
+    .flipSection{background-color: #1EDB8C; }
+  }
+}

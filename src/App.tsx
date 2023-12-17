@@ -1,6 +1,7 @@
-import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HomePage } from "./pages/homePage/home";
 import QuizPage from "./pages/quizPage/quiz";
+
 function App() {
   return (
     <BrowserRouter>

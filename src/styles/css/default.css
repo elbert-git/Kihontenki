@@ -67,16 +67,16 @@
 
 /* flex-grow */
 .flexGrow {
-  flex-grow: -1;
+  flex-grow: 1;
 }
 
 /* sizing divs */
 .fillWidth {
-  width: 98%;
+  width: 100%;
 }
 
 .fillHeight {
-  height: 98%;
+  height: 100%;
 }
 
 .hugHeight {
@@ -110,9 +110,13 @@
 }
 
 /* layering over */
+.relative {
+  position: relative;
+}
+
 .overlay {
   position: absolute;
-  top: -2;
+  top: 0;
   left: 0;
 }
 

@@ -14,7 +14,7 @@ function CardSlot(props:{card:Card, heatmap:boolean}){
 	const cardClicked:()=>void = ()=>{setFlip(!flip)}
 	const cardHolderStyle:React.CSSProperties={
 		scale: `${enabledCards[props.card.key]?'1':'0.8'}`,
-		opacity: `${enabledCards[props.card.key]?'1':'0.3'}`,
+		opacity: `${enabledCards[props.card.key]?'1':'0.7'}`,
 		transition: '0.3s'
 	}
 
@@ -55,8 +55,8 @@ export default function CardGrid(props:{deck:Deck}){
 	const toggleHeatmap = ()=>{setHeatmap(!heatmap)}
 	return <div>
 		<div className="fillWidth flex flexJustifyEvenly">
-			<KH_Button click={()=>{massToggle(true)}} content="enable all" style={massEnableButtonStyles}></KH_Button>
-			<KH_Button click={()=>{massToggle(false)}} content="disable all" style={massEnableButtonStyles}></KH_Button>
+			<KH_Button click={()=>{massToggle(true)}} style={massEnableButtonStyles}>enable all</KH_Button>
+			<KH_Button click={()=>{massToggle(false)}} style={massEnableButtonStyles}>disable all</KH_Button>
 		</div>
 		<div className="fillWidth flex flexJustifyBetween flexAlignCenter" onClick={toggleHeatmap}>
 			Show recall heatmap

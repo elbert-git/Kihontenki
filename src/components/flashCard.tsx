@@ -10,7 +10,6 @@ export default function FlashCard(props:{card:Card,flip:boolean, cardClick?:()=>
   }
 
   const scoreToColor = (score:number)=>{
-    console.log(score)
     let finalCol = '#76FF7B'
     if(score < 80){finalCol = '#E4F28E'}
     if(score < 40){finalCol = '#FFC977'}
@@ -21,7 +20,6 @@ export default function FlashCard(props:{card:Card,flip:boolean, cardClick?:()=>
 
   const cardColorStyle:React.CSSProperties = {
     backgroundColor: `${props.heatmap?scoreToColor(props.card.score):defaultColors.green}`
-    // backgroundColor: `${true?scoreToColor(props.card.score):defaultColors.green}`
   }
 
   return <div className="flashCard" onClick={props.cardClick?props.cardClick:()=>{}}>
