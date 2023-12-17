@@ -1,5 +1,5 @@
 .quiz {
-  overflow: clip;
+  overflow-x: clip;
 }
 .quiz .cardZone {
   max-height: 100%;

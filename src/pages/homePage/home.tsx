@@ -7,6 +7,7 @@ import { UserDecks } from "../../data/interfaces";
 import DataManager from "../../data/dataManager";
 import CardGrid from "./cardGrid";
 import { useNavigate } from "react-router-dom";
+import { ResetDataButton } from "./resetData";
 
 const mainQuizButtonStyle:React.CSSProperties = {
   backgroundColor:defaultColors.tael,
@@ -48,15 +49,17 @@ export function HomePage(){
  
   return (
     <EnabledCardsContext.Provider value={[enabledCards, setEnabledCardsAndSaveData]}>
-        <Header></Header>
-        <KH_Button click={()=>{navigateTo('/quiz')}} style={mainQuizButtonStyle}>Quiz</KH_Button>
-        {/* render all decks  */}
-        {userData?userData.decks.map((deck)=>{
-          // render all cards
-          return <Accordion header={deck.name} key={deck.name}>
-            <CardGrid deck={deck}></CardGrid>
-          </Accordion>
-        }):"loading..."}
+      <Header></Header>
+      <KH_Button click={()=>{navigateTo('/quiz')}} style={mainQuizButtonStyle}>Quiz</KH_Button>
+      {/* render all decks  */}
+      {userData?userData.decks.map((deck)=>{
+        // render all cards
+        return <Accordion header={deck.name} key={deck.name}>
+          <CardGrid deck={deck}></CardGrid>
+        </Accordion>
+      }):"loading..."}
+      <ResetDataButton></ResetDataButton>
+      <div style={{height:'1rem'}}></div>
     </EnabledCardsContext.Provider>
   )
 }
