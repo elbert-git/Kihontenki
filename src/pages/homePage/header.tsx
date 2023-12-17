@@ -1,6 +1,3 @@
-import { useEffect } from "react";
-import DataManager from "../../data/dataManager"
-
 export default function Header(){
   return <div className="header">
     <div className="main">
