@@ -11,10 +11,10 @@ export default function FlashCard(props:{card:Card,flip:boolean, cardClick?:()=>
 
   const scoreToColor = (score:number)=>{
     let finalCol = '#76FF7B'
-    if(score < 80){finalCol = '#E4F28E'}
-    if(score < 40){finalCol = '#FFC977'}
-    if(score < 60){finalCol = '#FF9E80'}
-    if(score < 20){finalCol = '#FF8585'}
+    if(score < 16){finalCol = '#E4F28E'}
+    if(score < 12){finalCol = '#FFC977'}
+    if(score < 8){finalCol = '#FF9E80'}
+    if(score < 4){finalCol = '#FF8585'}
     return finalCol
   }
 

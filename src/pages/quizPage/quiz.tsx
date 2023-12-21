@@ -8,7 +8,7 @@ import { defaultColors } from "../../data/defaultColors";
 import { useNavigate } from "react-router-dom";
 import CardZone from "./cardZone";
 
-function clamp(value:number, min=0, max=100) {
+function clamp(value:number, min=0, max=20) {
   return Math.min(Math.max(value, min), max);
 }
 
